@@ -103,3 +103,29 @@ def sistema():
 
 if __name__ == "__main__":
     sistema()
+
+
+# 16: Función sin docstring (documentación)
+def calcular_promedio(numeros):
+    suma = 0
+    for num in numeros:
+        suma += num
+    return suma / len(numeros)
+
+# 17: Variable no utilizada
+def calcular_suma(a, b):
+    resultado = a + b
+    x = 100  # Esta variable no se usa nunca
+    return resultado
+
+# 18: Comparación de tipos incorrecta
+def comparar_tipos(valor):
+    if type(valor) == int:  # Mala práctica, debería ser isinstance()
+        return "Es entero"
+    return "No es entero"
+
+# 19: Uso de '== True' innecesario
+def verificar_activo(activo):
+    if activo == True:  # Debería ser 'if activo:'
+        return "Activo"
+    return "Inactivo"
